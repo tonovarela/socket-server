@@ -1,8 +1,5 @@
 import {Router, Request, Response} from 'express';
-
-
 export const router = Router();
-
 router.get('/mensajes',(req:Request,res: Response)=>{
 
      res.json({
@@ -10,7 +7,6 @@ router.get('/mensajes',(req:Request,res: Response)=>{
          mensaje: 'Todo esta bien'
      });
 });
-
 router.post('/mensajes',(req:Request,res: Response)=>{
   const cuerpo = req.body.cuerpo;
   const de  = req.body.de;
@@ -20,7 +16,6 @@ router.post('/mensajes',(req:Request,res: Response)=>{
         de
     });
 });
-
 
 router.post('/mensajes/:parametro',(req:Request,res: Response)=>{
     const cuerpo = req.body.cuerpo;
@@ -33,5 +28,6 @@ router.post('/mensajes/:parametro',(req:Request,res: Response)=>{
           parametro
       });
   });
+
 
 export default router;
